@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Nusantara - Cita Rasa Indonesia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #c94b4b 0%, #8b2e2e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(201, 75, 75, 0.8), rgba(139, 46, 46, 0.8)), 
+                        url('https://images.unsplash.com/photo-1604909053112-42a25b4e4d4a?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 2rem 100px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Section: Kuliner */
+        section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #8b2e2e;
+        }
+
+        .kuliner-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .kuliner {
+            background: #fff5f5;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .kuliner:hover {
+            transform: translateY(-5px);
+        }
+
+        .kuliner img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .kuliner h3 {
+            padding: 1rem;
+            color: #c94b4b;
+        }
+
+        .kuliner p {
+            padding: 0 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #8b2e2e;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Kuliner Nusantara</div>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#kuliner">Kuliner</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <h1>Cita Rasa Indonesia</h1>
+        <p>Menjelajahi kekayaan kuliner dari Sabang sampai Merauke yang menggugah selera dan penuh tradisi.</p>
+    </section>
+
+    <section id="kuliner">
+        <h2>Kuliner Khas Nusantara</h2>
+        <div class="kuliner-list">
+            <div class="kuliner">
+                <img src="image/rendang.jpeg" alt="Rendang">
+                <h3>Rendang - Sumatera Barat</h3>
+                <p>Dikenal sebagai salah satu makanan terenak di dunia, rendang dibuat dari daging sapi yang dimasak perlahan dengan santan dan rempah khas Minang.</p>
+            </div>
+
+            <div class="kuliner">
+                <img src="image/sate.jpeg" alt="Sate Madura">
+                <h3>Sate Madura - Jawa Timur</h3>
+                <p>Sate ayam dengan bumbu kacang khas Madura, disajikan dengan lontong dan bawang goreng yang menggoda selera.</p>
+            </div>
+
+            <div class="kuliner">
+                <img src="image/papeda.jpeg" alt="Papeda">
+                <h3>Papeda - Papua</h3>
+                <p>Makanan khas Papua yang terbuat dari sagu, disajikan dengan ikan kuah kuning dan menjadi simbol kekayaan kuliner timur Indonesia.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <p>&copy; 2025 Kuliner Nusantara | Cita Rasa Indonesia</p>
+    </footer>
+
+</body>
+</html>
